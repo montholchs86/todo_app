@@ -30,7 +30,7 @@ RUN npm install
  USER labone_user
 
 # Open mapped port
-EXPOSE 80
+EXPOSE 8080
 
 # Start the process
 CMD ["node", "src/index.js"]
