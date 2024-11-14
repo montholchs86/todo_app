@@ -14,7 +14,7 @@ app.post('/items', addItem);
 app.put('/items/:id', updateItem);
 app.delete('/items/:id', deleteItem);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 db.init().then(() => {
     app.listen(port, () => console.log(`Listening on port ${port}`));
