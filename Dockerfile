@@ -17,18 +17,6 @@ WORKDIR /usr/labone
 # Running npm install
 RUN npm install
 
-# Create a user group 
-RUN addgroup -S labone_group
-
-# Create a user 'labone_user' under 'labone_group'
-RUN adduser -S  -D -h /usr/labone/src labone_user labone_group
-
-#chown all file to the app user
-RUN chown -R labone_user:labone_group /usr/labone/
-
-# Switch to labone_user
-USER labone_user
-
 # Open mapped port
 EXPOSE 3000
 
